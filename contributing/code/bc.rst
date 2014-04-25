@@ -3,8 +3,14 @@
     * 対象バージョン：2.3以降
     * 翻訳更新日：2014/04/25
 
-Our Backwards Compatibility Promise
-===================================
+後方互換性の保証について
+========================
+
+私達はプロジェクトの円滑なアップグレードの保証を最も重視しています。
+そのためSymfonyではすべてのマイナーリリース間の後方互換性を保証します。
+`セマンティックバージョニング`_と言うバージョニング戦略をご存知の方も多いでしょう。
+セマンティックバージョニングとは、メジャーリリース（2.0や3.0など）だけが後方互換性を破壊できる事を意味します。
+マイナーリリース（2.5や2.6のような）では新機能の追加が行われますが、当該リリースブランチ（2.x in the previous example）の既存のAPIの後方互換性は保たれます。
 
 Ensuring smooth upgrades of your projects is our first priority. That's why
 we promise you backwards compatibility (BC) for all minor Symfony releases.
@@ -16,14 +22,14 @@ that release branch (2.x in the previous example).
 
 .. caution::
 
-    This promise was introduced with Symfony 2.3 and does not apply to previous
-    versions of Symfony.
+    この保証はSymfony 2.3 から施行されたため、その前のバージョンでは保証されません。
 
-However, backwards compatibility comes in many different flavors. In fact, almost
-every change that we make to the framework can potentially break an application.
-For example, if we add a new method to a class, this will break an application
-which extended this class and added the same method, but with a different
-method signature.
+However, backwards compatibility comes in many different flavors. 
+実際に、フレームワークに行われるほぼすべての変更はアプリケーションを破壊する恐れがあります。
+例えばクラスに新しいメソッドが追加されると、それを継承しているクラスが、同名の異なるシグネチャのメソッドを持っていた場合にアプリケーションが壊れます。
+
+また、全てのBCブレークがアプリケーションに影響を及ぼすというわけではありません。
+BCブレークがあなたの作ったクラスやアーキテクチャに重要な変更を要求する間に、
 
 Also, not every BC break has the same impact on application code. While some BC
 breaks require you to make significant changes to your classes or your
