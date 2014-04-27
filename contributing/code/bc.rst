@@ -1,16 +1,16 @@
 .. note::
 
-    * ‘ÎÛƒo[ƒWƒ‡ƒ“F2.3ˆÈ~
-    * –|–óXV“úF2014/04/25
+    * å¯¾è±¡ãƒãƒ¼ã‚¸ãƒ§ãƒ³ï¼š2.3ä»¥é™
+    * ç¿»è¨³æ›´æ–°æ—¥ï¼š2014/04/25
 
-Œã•ûŒİŠ·«‚Ì•ÛØ‚É‚Â‚¢‚Ä
+å¾Œæ–¹äº’æ›æ€§ã®ä¿è¨¼ã«ã¤ã„ã¦
 ========================
 
-„’B‚ÍƒvƒƒWƒFƒNƒg‚Ì‰~ŠŠ‚ÈƒAƒbƒvƒOƒŒ[ƒh‚Ì•ÛØ‚ğÅ‚àd‹‚µ‚Ä‚¢‚Ü‚·B
-‚»‚Ì‚½‚ßSymfony‚Å‚Í‚·‚×‚Ä‚Ìƒ}ƒCƒi[ƒŠƒŠ[ƒXŠÔ‚ÌŒã•ûŒİŠ·«‚ğ•ÛØ‚µ‚Ü‚·B
-`ƒZƒ}ƒ“ƒeƒBƒbƒNƒo[ƒWƒ‡ƒjƒ“ƒO`_‚ÆŒ¾‚¤ƒo[ƒWƒ‡ƒjƒ“ƒOí—ª‚ğ‚²‘¶’m‚Ì•û‚à‘½‚¢‚Å‚µ‚å‚¤B
-ƒZƒ}ƒ“ƒeƒBƒbƒNƒo[ƒWƒ‡ƒjƒ“ƒO‚Æ‚ÍAƒƒWƒƒ[ƒŠƒŠ[ƒXi2.0‚â3.0‚È‚Çj‚¾‚¯‚ªŒã•ûŒİŠ·«‚ğ”j‰ó‚Å‚«‚é–‚ğˆÓ–¡‚µ‚Ü‚·B
-ƒ}ƒCƒi[ƒŠƒŠ[ƒXi2.5‚â2.6‚Ì‚æ‚¤‚Èj‚Å‚ÍV‹@”\‚Ì’Ç‰Á‚ªs‚í‚ê‚Ü‚·‚ªA“–ŠYƒŠƒŠ[ƒXƒuƒ‰ƒ“ƒ`i2.x in the previous examplej‚ÌŠù‘¶‚ÌAPI‚ÌŒã•ûŒİŠ·«‚Í•Û‚½‚ê‚Ü‚·B
+ç§é”ã¯ãƒ—ãƒ­ã‚¸ã‚§ã‚¯ãƒˆã®å††æ»‘ãªã‚¢ãƒƒãƒ—ã‚°ãƒ¬ãƒ¼ãƒ‰ã®ä¿è¨¼ã‚’æœ€ã‚‚é‡è¦–ã—ã¦ã„ã¾ã™ã€‚
+ãã®ãŸã‚Symfonyã§ã¯ã™ã¹ã¦ã®ãƒã‚¤ãƒŠãƒ¼ãƒªãƒªãƒ¼ã‚¹é–“ã®å¾Œæ–¹äº’æ›æ€§ã‚’ä¿è¨¼ã—ã¾ã™ã€‚
+`ã‚»ãƒãƒ³ãƒ†ã‚£ãƒƒã‚¯ãƒãƒ¼ã‚¸ãƒ§ãƒ‹ãƒ³ã‚°`_ã¨è¨€ã†ãƒãƒ¼ã‚¸ãƒ§ãƒ‹ãƒ³ã‚°æˆ¦ç•¥ã‚’ã”å­˜çŸ¥ã®æ–¹ã‚‚å¤šã„ã§ã—ã‚‡ã†ã€‚
+ã‚»ãƒãƒ³ãƒ†ã‚£ãƒƒã‚¯ãƒãƒ¼ã‚¸ãƒ§ãƒ‹ãƒ³ã‚°ã¨ã¯ã€ãƒ¡ã‚¸ãƒ£ãƒ¼ãƒªãƒªãƒ¼ã‚¹ï¼ˆ2.0ã‚„3.0ãªã©ï¼‰ã ã‘ãŒå¾Œæ–¹äº’æ›æ€§ã‚’ç ´å£Šã§ãã‚‹äº‹ã‚’æ„å‘³ã—ã¾ã™ã€‚
+ãƒã‚¤ãƒŠãƒ¼ãƒªãƒªãƒ¼ã‚¹ï¼ˆ2.5ã‚„2.6ã®ã‚ˆã†ãªï¼‰ã§ã¯æ–°æ©Ÿèƒ½ã®è¿½åŠ ãŒè¡Œã‚ã‚Œã¾ã™ãŒã€å½“è©²ãƒªãƒªãƒ¼ã‚¹ãƒ–ãƒ©ãƒ³ãƒï¼ˆ2.x in the previous exampleï¼‰ã®æ—¢å­˜ã®APIã®å¾Œæ–¹äº’æ›æ€§ã¯ä¿ãŸã‚Œã¾ã™ã€‚
 
 Ensuring smooth upgrades of your projects is our first priority. That's why
 we promise you backwards compatibility (BC) for all minor Symfony releases.
@@ -22,14 +22,14 @@ that release branch (2.x in the previous example).
 
 .. caution::
 
-    ‚±‚Ì•ÛØ‚ÍSymfony 2.3 ‚©‚ç{s‚³‚ê‚½‚½‚ßA‚»‚Ì‘O‚Ìƒo[ƒWƒ‡ƒ“‚Å‚Í•ÛØ‚³‚ê‚Ü‚¹‚ñB
+    ã“ã®ä¿è¨¼ã¯Symfony 2.3 ã‹ã‚‰æ–½è¡Œã•ã‚ŒãŸãŸã‚ã€ãã®å‰ã®ãƒãƒ¼ã‚¸ãƒ§ãƒ³ã§ã¯ä¿è¨¼ã•ã‚Œã¾ã›ã‚“ã€‚
 
 However, backwards compatibility comes in many different flavors. 
-ÀÛ‚ÉAƒtƒŒ[ƒ€ƒ[ƒN‚És‚í‚ê‚é‚Ù‚Ú‚·‚×‚Ä‚Ì•ÏX‚ÍƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ğ”j‰ó‚·‚é‹°‚ê‚ª‚ ‚è‚Ü‚·B
-—á‚¦‚ÎƒNƒ‰ƒX‚ÉV‚µ‚¢ƒƒ\ƒbƒh‚ª’Ç‰Á‚³‚ê‚é‚ÆA‚»‚ê‚ğŒp³‚µ‚Ä‚¢‚éƒNƒ‰ƒX‚ªA“¯–¼‚ÌˆÙ‚È‚éƒVƒOƒlƒ`ƒƒ‚Ìƒƒ\ƒbƒh‚ğ‚Á‚Ä‚¢‚½ê‡‚ÉƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚ª‰ó‚ê‚Ü‚·B
+å®Ÿéš›ã«ã€ãƒ•ãƒ¬ãƒ¼ãƒ ãƒ¯ãƒ¼ã‚¯ã«è¡Œã‚ã‚Œã‚‹ã»ã¼ã™ã¹ã¦ã®å¤‰æ›´ã¯ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã‚’ç ´å£Šã™ã‚‹æã‚ŒãŒã‚ã‚Šã¾ã™ã€‚
+ä¾‹ãˆã°ã‚¯ãƒ©ã‚¹ã«æ–°ã—ã„ãƒ¡ã‚½ãƒƒãƒ‰ãŒè¿½åŠ ã•ã‚Œã‚‹ã¨ã€ãã‚Œã‚’ç¶™æ‰¿ã—ã¦ã„ã‚‹ã‚¯ãƒ©ã‚¹ãŒã€åŒåã®ç•°ãªã‚‹ã‚·ã‚°ãƒãƒãƒ£ã®ãƒ¡ã‚½ãƒƒãƒ‰ã‚’æŒã£ã¦ã„ãŸå ´åˆã«ã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ãŒå£Šã‚Œã¾ã™ã€‚
 
-‚Ü‚½A‘S‚Ä‚ÌBCƒuƒŒ[ƒN‚ªƒAƒvƒŠƒP[ƒVƒ‡ƒ“‚É‰e‹¿‚ğ‹y‚Ú‚·‚Æ‚¢‚¤‚í‚¯‚Å‚Í‚ ‚è‚Ü‚¹‚ñB
-BCƒuƒŒ[ƒN‚ª‚ ‚È‚½‚Ìì‚Á‚½ƒNƒ‰ƒX‚âƒA[ƒLƒeƒNƒ`ƒƒ‚Éd—v‚È•ÏX‚ğ—v‹‚·‚éŠÔ‚ÉA
+ã¾ãŸã€å…¨ã¦ã®BCãƒ–ãƒ¬ãƒ¼ã‚¯ãŒã‚¢ãƒ—ãƒªã‚±ãƒ¼ã‚·ãƒ§ãƒ³ã«å½±éŸ¿ã‚’åŠã¼ã™ã¨ã„ã†ã‚ã‘ã§ã¯ã‚ã‚Šã¾ã›ã‚“ã€‚
+BCãƒ–ãƒ¬ãƒ¼ã‚¯ãŒã‚ãªãŸã®ä½œã£ãŸã‚¯ãƒ©ã‚¹ã‚„ã‚¢ãƒ¼ã‚­ãƒ†ã‚¯ãƒãƒ£ã«é‡è¦ãªå¤‰æ›´ã‚’è¦æ±‚ã™ã‚‹é–“ã«ã€
 
 Also, not every BC break has the same impact on application code. While some BC
 breaks require you to make significant changes to your classes or your
@@ -51,7 +51,7 @@ you to ensure smooth upgrades to all future minor releases of your Symfony
 version.
 
 Using Our Interfaces
-~~~~~~~~~~~~~~~~~~~~
+â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾
 
 All interfaces shipped with Symfony can be used in type hints. You can also call
 any of the methods that they declare. We guarantee that we won't break code that
@@ -113,7 +113,7 @@ backwards compatibility promise:
 .. include:: _api_tagging.rst.inc
 
 Using Our Classes
-~~~~~~~~~~~~~~~~~
+â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾
 
 All classes provided by Symfony may be instantiated and accessed through their
 public methods and properties.
@@ -121,7 +121,7 @@ public methods and properties.
 .. caution::
 
     Classes, properties and methods that bear the tag ``@internal`` as well as
-    the classes located in the various ``*\\Tests\\`` namespaces are an
+    the classes located in the various ``*Â¥Â¥TestsÂ¥Â¥`` namespaces are an
     exception to this rule. They are meant for internal use only and should
     not be accessed by your own code.
 
@@ -211,7 +211,7 @@ Do you want to help us improve Symfony? That's great! However, please stick
 to the rules listed below in order to ensure smooth upgrades for our users.
 
 Changing Interfaces
-~~~~~~~~~~~~~~~~~~~
+â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾
 
 This table tells you which changes you are allowed to do when working on
 Symfony's interfaces:
@@ -240,7 +240,7 @@ Change return type                              Yes [2]_ [6]_   No
 ==============================================  ==============  ==============
 
 Changing Classes
-~~~~~~~~~~~~~~~~
+â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾â€¾
 
 This table tells you which changes you are allowed to do when working on
 Symfony's classes:
