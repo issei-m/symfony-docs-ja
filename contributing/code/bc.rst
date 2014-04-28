@@ -10,61 +10,40 @@
 そのためSymfonyではすべてのマイナーリリース間の後方互換性を保証します。
 `セマンティックバージョニング`_と言うバージョニング戦略をご存知の方も多いでしょう。
 セマンティックバージョニングとは、メジャーリリース（2.0や3.0など）だけが後方互換性を破壊できる事を意味します。
-マイナーリリース（2.5や2.6のような）では新機能の追加が行われますが、当該リリースブランチ（2.x in the previous example）の既存のAPIの後方互換性は保たれます。
-
-Ensuring smooth upgrades of your projects is our first priority. That's why
-we promise you backwards compatibility (BC) for all minor Symfony releases.
-You probably recognize this strategy as `Semantic Versioning`_. In short,
-Semantic Versioning means that only major releases (such as 2.0, 3.0 etc.) are
-allowed to break backwards compatibility. Minor releases (such as 2.5, 2.6 etc.)
-may introduce new features, but must do so without breaking the existing API of
-that release branch (2.x in the previous example).
+マイナーリリース（2.5や2.6のような）では新機能の追加が行われますが、そのリリースブランチ（2.xの例）の既存のAPIの後方互換性は保たれます。
 
 .. caution::
 
-    この保証はSymfony 2.3 から施行されたため、その前のバージョンでは保証されません。
+    この保証はSymfony 2.3 から施行されたため、その前のバージョンには適用されません。
 
-However, backwards compatibility comes in many different flavors. 
-実際に、フレームワークに行われるほぼすべての変更はアプリケーションを破壊する恐れがあります。
-例えばクラスに新しいメソッドが追加されると、それを継承しているクラスが、同名の異なるシグネチャのメソッドを持っていた場合にアプリケーションが壊れます。
+しかし、一口に後方互換性と言っても様々な種類があります。
+実際には、フレームワークに行われるほぼすべての変更はアプリケーションを破壊する恐れがあります。
+例えば、クラスに新しいメソッドが追加されると、それを継承しているクラスが同名の異なるシグネチャのメソッドを持っていた場合、アプリケーションが壊れてしまいます。
 
-また、全てのBCブレークがアプリケーションに影響を及ぼすというわけではありません。
-BCブレークがあなたの作ったクラスやアーキテクチャに重要な変更を要求する間に、
+また、全てのBCブレークがアプリケーションに影響を与えるわけではありません。
+作ったクラスやアーキテクチャに大幅な変更が必要な物もあれば、一方で、単にメソッド名を変更することだけで解決する物もあります。
 
-Also, not every BC break has the same impact on application code. While some BC
-breaks require you to make significant changes to your classes or your
-architecture, others are fixed as easily as changing the name of a method.
+そこで私達はこのページを作りました。"Using Symfony Code"セクションでは、どのようにすればアプリケーションを壊す事なく、確実に同じメジャーリリースブランチの新しいバージョンにアップグレードする事ができるかを説明します。
 
-That's why we created this page for you. The section "Using Symfony Code" will
-tell you how you can ensure that your application won't break completely when
-upgrading to a newer version of the same major release branch.
-
-The second section, "Working on Symfony Code", is targeted at Symfony
-contributors. This section lists detailed rules that every contributor needs to
-follow to ensure smooth upgrades for our users.
+次の"Working on Symfony Code"はSymfonyコントリビュータ向けのセクションです。
+このセクションではユーザの円滑なアップグレードを保証するために、すべてのコントリビュータが準拠すべき規約の詳細を列挙します。
 
 Using Symfony Code
 ------------------
 
-If you are using Symfony in your projects, the following guidelines will help
-you to ensure smooth upgrades to all future minor releases of your Symfony
-version.
+プロジェクトでSymfonyを使用してる場合、以下のガイドラインに従うことで今後のSymfonyのすべてのマイナーリリースに円滑にアップグレードする事ができます。
 
-Using Our Interfaces
-‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+インターフェースの利用
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-All interfaces shipped with Symfony can be used in type hints. You can also call
-any of the methods that they declare. We guarantee that we won't break code that
-sticks to these rules.
+Symfonyが用意しているすべてのインターフェースはタイプヒントで利用する事ができ、宣言されている全てのメソッドをコールすることができます。
+私達は、これらの規則を守るコードを壊さないことを保証します。
 
 .. caution::
 
-    The exception to this rule are interfaces tagged with ``@internal``. Such
-    interfaces should not be used or implemented.
+    例外として、``@internal``がタグ付けされているインターフェースが挙げられます。このようなインターフェースは使用、または実装すべきでありません。
 
-If you want to implement an interface, you should first make sure that the
-interface is an API interface. You can recognize API interfaces by the ``@api``
-tag in their source code::
+インターフェースを実装する場合、まずそれがAPIインターフェースであるかを確認します。次のような、``@api``タグの付いている物がAPIインターフェースとなります::
 
     /**
      * HttpKernelInterface handles a Request to convert it to a Response.
@@ -78,37 +57,31 @@ tag in their source code::
         // ...
     }
 
-If you implement an API interface, we promise that we won't ever break your
-code. Regular interfaces, by contrast, may be extended between minor releases,
-for example by adding a new method. Be prepared to upgrade your code manually
-if you implement a regular interface.
+APIインターフェースを実装していれば、将来そのコードが壊される事はありません。対照的に、通常のインターフェースはマイナーリリース時に、新しいメソッドを追加するなどの拡張がされる可能性がある為、アップグレードの際は事前に確認を行い、必要であれば手動でコードを移行しておく必要があります。
 
 .. note::
 
-    Even if we do changes that require manual upgrades, we limit ourselves to
-    changes that can be upgraded easily. We will always document the precise
-    upgrade instructions in the UPGRADE file in Symfony's root directory.
+    移行が必要な変更は最小限である事が保証され、それらの変更は常にSymfonyルートディレクトリに配置されているUPGRADEファイルに正確な移行の指示を明記します。
 
-The following table explains in detail which use cases are covered by our
-backwards compatibility promise:
+次の表は、どのようなユースケースが後方互換性が保たれるかを説明します。
 
-+-----------------------------------------------+---------------+---------------+
-| Use Case                                      | Regular       | API           |
-+===============================================+===============+===============+
-| **If you...**                                 | **Then we guarantee BC...**   |
-+-----------------------------------------------+---------------+---------------+
-| Type hint against the interface               | Yes           | Yes           |
-+-----------------------------------------------+---------------+---------------+
-| Call a method                                 | Yes           | Yes           |
-+-----------------------------------------------+---------------+---------------+
-| **If you implement the interface and...**     | **Then we guarantee BC...**   |
-+-----------------------------------------------+---------------+---------------+
-| Implement a method                            | No [1]_       | Yes           |
-+-----------------------------------------------+---------------+---------------+
-| Add an argument to an implemented method      | No [1]_       | Yes           |
-+-----------------------------------------------+---------------+---------------+
-| Add a default value to an argument            | Yes           | Yes           |
-+-----------------------------------------------+---------------+---------------+
++-------------------------------------------------+--------------------+--------------------+
+| ユースケース                                    | 通常               | API                |
++=================================================+====================+====================+
+| **あなたが...**                                 | **する場合は後方互換性は保たれる...**   |
++-------------------------------------------------+--------------------+--------------------+
+| インターフェースに対するタイプヒント            | Yes                | Yes                |
++-------------------------------------------------+--------------------+--------------------+
+| メソッドをコール                                | Yes                | Yes                |
++-------------------------------------------------+--------------------+--------------------+
+| **あなたがインターフェースを実装し、かつ、...** | **する場合は後方互換性は保たれる...**   |
++-------------------------------------------------+--------------------+--------------------+
+| メソッドを実装                                  | No [1]_            | Yes                |
++-------------------------------------------------+--------------------+--------------------+
+| 実装したメソッドに引数を追加                    | No [1]_            | Yes                |
++-------------------------------------------------+--------------------+--------------------+
+| 引数にデフォルト値を設定                        | Yes                | Yes                |
++-------------------------------------------------+--------------------+--------------------+
 
 .. include:: _api_tagging.rst.inc
 
@@ -370,11 +343,11 @@ Change return type                                  Yes             Yes
 .. [8] A type hint may only be added if passing a value with a different type
        previously generated a fatal error.
 
-.. _Semantic Versioning: http://semver.org/
-.. _scalar type: http://php.net/manual/en/function.is-scalar.php
-.. _boolean values: http://php.net/manual/en/function.boolval.php
-.. _string values: http://www.php.net/manual/en/function.strval.php
-.. _integer values: http://www.php.net/manual/en/function.intval.php
-.. _float values: http://www.php.net/manual/en/function.floatval.php
+.. _セマンティックバージョニング: http://semver.org/
+.. _スカラー型: http://php.net/manual/ja/function.is-scalar.php
+.. _boolean値: http://php.net/manual/ja/function.boolval.php
+.. _string値: http://www.php.net/manual/ja/function.strval.php
+.. _integer値: http://www.php.net/manual/ja/function.intval.php
+.. _float値: http://www.php.net/manual/ja/function.floatval.php
 
 .. 2014/04/25 issei-m 6c1ded9af043f1711d6349db91711b2e5fc33bb4
