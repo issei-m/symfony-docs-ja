@@ -171,114 +171,112 @@ Symfony Codeへの取り組み
 Symfonyの改善に貢献する場合、ユーザーの円滑なアップグレードを保証する為に、下記で示すルールに厳格に則る必要があります。
 
 インターフェースへの変更
-‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-This table tells you which changes you are allowed to do when working on
-Symfony's interfaces:
+次の表では、既存のインターフェースへの許可されている変更を示します:
 
-==============================================  ==============  ==============
-Type of Change                                  Regular         API
-==============================================  ==============  ==============
-Remove entirely                                 No              No
-Change name or namespace                        No              No
-Add parent interface                            Yes [2]_        Yes [3]_
-Remove parent interface                         No              No
-**Methods**
-Add method                                      Yes [2]_        No
-Remove method                                   No              No
-Change name                                     No              No
-Move to parent interface                        Yes             Yes
-Add argument without a default value            No              No
-Add argument with a default value               Yes [2]_        No
-Remove argument                                 Yes [4]_        Yes [4]_
-Add default value to an argument                Yes [2]_        No
-Remove default value of an argument             No              No
-Add type hint to an argument                    No              No
-Remove type hint of an argument                 Yes [2]_        No
-Change argument type                            Yes [2]_ [5]_   No
-Change return type                              Yes [2]_ [6]_   No
-==============================================  ==============  ==============
+===========================================  ==============  ==============
+変更の内容                                   レギュラー      API
+===========================================  ==============  ==============
+インターフェースそのものを削除               No              No
+インターフェース名、あるいは名前空間の変更   No              No
+親インターフェースの追加                     Yes [2]_        Yes [3]_
+親インターフェースの削除                     No              No
+**メソッド**
+メソッドの追加                               Yes [2]_        No
+メソッドの削除                               No              No
+メソッド名の変更                             No              No
+親インターフェースに移動                     Yes             Yes
+デフォルト値を持たない引数の追加             No              No
+デフォルト値を持つ引数の追加                 Yes [2]_        No
+引数の削除                                   Yes [4]_        Yes [4]_
+引数にデフォルト値を設定                     Yes [2]_        No
+引数のデフォルト値を削除                     No              No
+引数にタイプヒントを設定                     No              No
+引数のタイプヒントを削除                     Yes [2]_        No
+引数の型を変更                               Yes [2]_ [5]_   No
+戻り値の型を変更                             Yes [2]_ [6]_   No
+===========================================  ==============  ==============
 
-Changing Classes
-‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾‾
+クラスへの変更
+‾‾‾‾‾‾‾‾‾‾‾‾‾‾
 
-This table tells you which changes you are allowed to do when working on
-Symfony's classes:
+次の表では、既存のクラスへの許可されている変更を示します:
 
-==================================================  ==============  ==============
-Type of Change                                      Regular         API
-==================================================  ==============  ==============
-Remove entirely                                     No              No
-Make final                                          No              No
-Make abstract                                       No              No
-Change name or namespace                            No              No
-Change parent class                                 Yes [7]_        Yes [7]_
-Add interface                                       Yes             Yes
-Remove interface                                    No              No
-**Public Properties**
-Add public property                                 Yes             Yes
-Remove public property                              No              No
-Reduce visibility                                   No              No
-Move to parent class                                Yes             Yes
-**Protected Properties**
-Add protected property                              Yes             Yes
-Remove protected property                           Yes [2]_        No
-Reduce visibility                                   Yes [2]_        No
-Move to parent class                                Yes             Yes
-**Private Properties**
-Add private property                                Yes             Yes
-Remove private property                             Yes             Yes
-**Constructors**
-Add constructor without mandatory arguments         Yes [2]_        Yes [2]_
-Remove constructor                                  Yes [2]_        No
-Reduce visibility of a public constructor           No              No
-Reduce visibility of a protected constructor        Yes [2]_        No
-Move to parent class                                Yes             Yes
-**Public Methods**
-Add public method                                   Yes             Yes
-Remove public method                                No              No
-Change name                                         No              No
-Reduce visibility                                   No              No
-Move to parent class                                Yes             Yes
-Add argument without a default value                No              No
-Add argument with a default value                   Yes [2]_        No
-Remove argument                                     Yes [4]_        Yes [4]_
-Add default value to an argument                    Yes [2]_        No
-Remove default value of an argument                 No              No
-Add type hint to an argument                        Yes [8]_        No
-Remove type hint of an argument                     Yes [2]_        No
-Change argument type                                Yes [2]_ [5]_   No
-Change return type                                  Yes [2]_ [6]_   No
-**Protected Methods**
-Add protected method                                Yes             Yes
-Remove protected method                             Yes [2]_        No
-Change name                                         No              No
-Reduce visibility                                   Yes [2]_        No
-Move to parent class                                Yes             Yes
-Add argument without a default value                Yes [2]_        No
-Add argument with a default value                   Yes [2]_        No
-Remove argument                                     Yes [4]_        Yes [4]_
-Add default value to an argument                    Yes [2]_        No
-Remove default value of an argument                 Yes [2]_        No
-Add type hint to an argument                        Yes [2]_        No
-Remove type hint of an argument                     Yes [2]_        No
-Change argument type                                Yes [2]_ [5]_   No
-Change return type                                  Yes [2]_ [6]_   No
-**Private Methods**
-Add private method                                  Yes             Yes
-Remove private method                               Yes             Yes
-Change name                                         Yes             Yes
-Reduce visibility                                   Yes             Yes
-Add argument without a default value                Yes             Yes
-Add argument with a default value                   Yes             Yes
-Remove argument                                     Yes             Yes
-Add default value to an argument                    Yes             Yes
-Remove default value of an argument                 Yes             Yes
-Add type hint to an argument                        Yes             Yes
-Remove type hint of an argument                     Yes             Yes
-Change argument type                                Yes             Yes
-Change return type                                  Yes             Yes
-==================================================  ==============  ==============
+========================================  ==============  ==============
+変更の内容                                レギュラー      API
+========================================  ==============  ==============
+クラスそのものを削除                      No              No
+finalに変更                               No              No
+abstractに変更                            No              No
+クラス名、あるいは名前空間の変更          No              No
+親クラスの変更                            Yes [7]_        Yes [7]_
+インターフェースの追加                    Yes             Yes
+インターフェースの削除                    No              No
+**publicプロパティ**
+publicプロパティの追加                    Yes             Yes
+publicプロパティの削除                    No              No
+スコープの降格                            No              No
+親クラスに移動                            Yes             Yes
+**protectedプロパティ**
+protectedプロパティの追加                 Yes             Yes
+protectedプロパティの削除                 Yes [2]_        No
+スコープの降格                            Yes [2]_        No
+親クラスに移動                            Yes             Yes
+**privateプロパティ**
+privateプロパティの追加                   Yes             Yes
+privateプロパティの削除                   Yes             Yes
+**コンストラクタ**
+必須な引数のないコンストラクタの追加      Yes [2]_        Yes [2]_
+コンストラクタの削除                      Yes [2]_        No
+publicコンストラクタのスコープの降格      No              No
+protectedコンストラクタのスコープの降格   Yes [2]_        No
+親クラスに移動                            Yes             Yes
+**publicメソッド**
+publicメソッドの追加                      Yes             Yes
+publicメソッドの削除                      No              No
+メソッド名の変更                          No              No
+スコープの降格                            No              No
+親クラスに移動                            Yes             Yes
+デフォルト値を持たない引数の追加          No              No
+デフォルト値を持つ引数の追加              Yes [2]_        No
+引数の削除                                Yes [4]_        Yes [4]_
+引数にデフォルト値を設定                  Yes [2]_        No
+引数のデフォルト値を削除                  No              No
+引数にタイプヒントを設定                  Yes [8]_        No
+引数のタイプヒントを削除                  Yes [2]_        No
+引数の型を変更                            Yes [2]_ [5]_   No
+戻り値の型を変更                          Yes [2]_ [6]_   No
+**protectedメソッド**
+protectedメソッドの追加                   Yes             Yes
+protectedメソッドの削除                   Yes [2]_        No
+メソッド名の変更                          No              No
+スコープの降格                            Yes [2]_        No
+親クラスに移動                            Yes             Yes
+デフォルト値を持たない引数の追加          Yes [2]_        No
+デフォルト値を持つ引数の追加              Yes [2]_        No
+引数の削除                                Yes [4]_        Yes [4]_
+引数にデフォルト値を設定                  Yes [2]_        No
+引数のデフォルト値を削除                  Yes [2]_        No
+引数にタイプヒントを設定                  Yes [2]_        No
+引数のタイプヒントを削除                  Yes [2]_        No
+引数の型を変更                            Yes [2]_ [5]_   No
+戻り値の型を変更                          Yes [2]_ [6]_   No
+**privateメソッド**
+protectedメソッドの追加                   Yes             Yes
+protectedメソッドの削除                   Yes             Yes
+メソッド名の変更                          Yes             Yes
+スコープの降格                            Yes             Yes
+デフォルト値を持たない引数の追加          Yes             Yes
+デフォルト値を持つ引数の追加              Yes             Yes
+引数の削除                                Yes             Yes
+引数にデフォルト値を設定                  Yes             Yes
+引数のデフォルト値を削除                  Yes             Yes
+引数にタイプヒントを設定                  Yes             Yes
+引数のタイプヒントを削除                  Yes             Yes
+引数の型を変更                            Yes             Yes
+戻り値の型を変更   
+========================================  ==============  ==============
 
 .. [1] Your code may be broken by changes in the Symfony code. Such changes will
        however be documented in the UPGRADE file.
