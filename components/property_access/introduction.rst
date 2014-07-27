@@ -4,23 +4,23 @@
 
 .. note::
 
-    * ‘ÎÛƒo[ƒWƒ‡ƒ“F2.5
-    * –|–óXV“úF2014/07/27
+    * å¯¾è±¡ãƒãƒ¼ã‚¸ãƒ§ãƒ³ï¼š2.5
+    * ç¿»è¨³æ›´æ–°æ—¥ï¼š2014/07/27
     
-PropertyAccessƒRƒ“ƒ|[ƒlƒ“ƒg
+PropertyAccessã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
 ============================
 
-    PropertyAccessƒRƒ“ƒ|[ƒlƒ“ƒg‚ğg‚¤‚ÆAƒVƒ“ƒvƒ‹‚È•¶š—ñ‹L–@‚ğg‚Á‚ÄƒIƒuƒWƒFƒNƒg‚â”z—ñ‚Ìƒf[ƒ^‚ğ“Ç‚İ‘‚«‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·B
+    PropertyAccessã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã‚’ä½¿ã†ã¨ã€ã‚·ãƒ³ãƒ—ãƒ«ãªæ–‡å­—åˆ—è¨˜æ³•ã‚’ä½¿ã£ã¦ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‚„é…åˆ—ã®ãƒ‡ãƒ¼ã‚¿ã‚’èª­ã¿æ›¸ãã™ã‚‹ã“ã¨ãŒã§ãã¾ã™ã€‚
 
-ƒCƒ“ƒXƒg[ƒ‹
+ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«
 ------------
 
-ˆÈ‰º‚Ì‚¢‚¸‚ê‚©‚Ì•û–@‚ÅƒCƒ“ƒXƒg[ƒ‹‚·‚é‚±‚Æ‚ª‚Å‚«‚Ü‚·:
+ä»¥ä¸‹ã®ã„ãšã‚Œã‹ã®æ–¹æ³•ã§ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«ã™ã‚‹ã“ã¨ãŒã§ãã¾ã™:
 
-* :doc:`Composer‚ğg‚Á‚ÄƒCƒ“ƒXƒg[ƒ‹</components/using_components>` (\ `Packagist` ‚Ì ``symfony/property-access``\ );
-* Œö®GitƒŠƒ|ƒWƒgƒŠ (https://github.com/symfony/PropertyAccess).
+* :doc:`Composerã‚’ä½¿ã£ã¦ã‚¤ãƒ³ã‚¹ãƒˆãƒ¼ãƒ«</components/using_components>` (\ `Packagist` ã® ``symfony/property-access``\ );
+* å…¬å¼Gitãƒªãƒã‚¸ãƒˆãƒª (https://github.com/symfony/PropertyAccess).
 
-g‚¢•û
+ä½¿ã„æ–¹
 ------
 
 The entry point of this component is the
@@ -29,11 +29,11 @@ factory. This factory will create a new instance of the
 :class:`Symfony\\Component\\PropertyAccess\\PropertyAccessor` class with the
 default configuration::
 
-ƒRƒ“ƒ|[ƒlƒ“ƒg‚Ì—˜—p‚Í‚Ü‚¸A
+ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆã®åˆ©ç”¨ã¯ã¾ãšã€
 :method:`PropertyAccess::createPropertyAccessor<Symfony\\Component\\PropertyAccess\\PropertyAccess::createPropertyAccessor>`
-‚ğÀs‚µ‚Ü‚·B‚±‚Ìƒtƒ@ƒNƒgƒŠƒƒ\ƒbƒh‚ÍƒfƒtƒHƒ‹ƒg‚Ìİ’è‚Å
+ã‚’å®Ÿè¡Œã—ã¾ã™ã€‚ã“ã®ãƒ•ã‚¡ã‚¯ãƒˆãƒªãƒ¡ã‚½ãƒƒãƒ‰ã¯ãƒ‡ãƒ•ã‚©ãƒ«ãƒˆã®è¨­å®šã§
 :class:`Symfony\\Component\\PropertyAccess\\PropertyAccessor`
-ƒCƒ“ƒXƒ^ƒ“ƒX‚ğ‰Šú‰»‚µ‚Ü‚·::
+ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã‚’åˆæœŸåŒ–ã—ã¾ã™::
 
     use Symfony\Component\PropertyAccess\PropertyAccess;
 
@@ -41,14 +41,14 @@ default configuration::
 
 .. versionadded:: 2.3
     :method:`Symfony\\Component\\PropertyAccess\\PropertyAccess::createPropertyAccessor`
-    ƒƒ\ƒbƒh‚ÍSymfony 2.3‚©‚ç—˜—p‰Â”\‚Æ‚È‚è‚Ü‚µ‚½BiˆÈ‘O‚±‚Ìƒƒ\ƒbƒh‚Í ``getPropertyAccessor()`` ‚ÆŒ¾‚¤–¼‘O‚Å‚µ‚½Bj
+    ãƒ¡ã‚½ãƒƒãƒ‰ã¯Symfony 2.3ã‹ã‚‰åˆ©ç”¨å¯èƒ½ã¨ãªã‚Šã¾ã—ãŸã€‚ï¼ˆä»¥å‰ã“ã®ãƒ¡ã‚½ãƒƒãƒ‰ã¯ ``getPropertyAccessor()`` ã¨è¨€ã†åå‰ã§ã—ãŸã€‚ï¼‰
 
-”z—ñ‚©‚ç‚Ì“Ç‚İ‚İ
+é…åˆ—ã‹ã‚‰ã®èª­ã¿è¾¼ã¿
 ------------------
 
-”z—ñ‚Ìƒf[ƒ^‚Í
+é…åˆ—ã®ãƒ‡ãƒ¼ã‚¿ã¯
 :method:`PropertyAccessor::getValue<Symfony\\Component\\PropertyAccess\\PropertyAccessor::getValue>`
-ƒƒ\ƒbƒh‚ÉAPHP‚Æ“¯—l‚Ì“Yš‹L–@‚ğ—p‚¢‚Ä“Ç‚İ‚İ‚Ü‚·B::
+ãƒ¡ã‚½ãƒƒãƒ‰ã«ã€PHPã¨åŒæ§˜ã®æ·»å­—è¨˜æ³•ã‚’ç”¨ã„ã¦èª­ã¿è¾¼ã¿ã¾ã™ã€‚::
 
     // ...
     $person = array(
@@ -58,9 +58,9 @@ default configuration::
     echo $accessor->getValue($person, '[first_name]'); // 'Wouter'
     echo $accessor->getValue($person, '[age]'); // null
 
-‚²——‚Ì‚Æ‚¨‚èA“Yš‚ÉŠY“–‚·‚é’l‚ª‘¶İ‚µ‚È‚¢ê‡‚Í ``null`` ‚ğ•Ô‚µ‚Ü‚·B
+ã”è¦§ã®ã¨ãŠã‚Šã€æ·»å­—ã«è©²å½“ã™ã‚‹å€¤ãŒå­˜åœ¨ã—ãªã„å ´åˆã¯ ``null`` ã‚’è¿”ã—ã¾ã™ã€‚
 
-‘½ŸŒ³”z—ñ‚É‚à‘Î‰‚µ‚Ä‚¢‚Ü‚·::
+å¤šæ¬¡å…ƒé…åˆ—ã«ã‚‚å¯¾å¿œã—ã¦ã„ã¾ã™::
 
     // ...
     $persons = array(
@@ -75,15 +75,15 @@ default configuration::
     echo $accessor->getValue($persons, '[0][first_name]'); // 'Wouter'
     echo $accessor->getValue($persons, '[1][first_name]'); // 'Ryan'
 
-ƒIƒuƒWƒFƒNƒg‚©‚ç‚Ì“Ç‚İ‚İ
+ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã‹ã‚‰ã®èª­ã¿è¾¼ã¿
 --------------------------
 
-\ ``getValue`` ‚Í”ñí‚É‹­—Í‚Èƒƒ\ƒbƒh‚ÅA“Á‚ÉƒIƒuƒWƒFƒNƒg‚Ì‘€ì‚Å‚»‚Ì—Í‚ğ”­Šö‚µ‚Ü‚·B
+\ ``getValue`` ã¯éå¸¸ã«å¼·åŠ›ãªãƒ¡ã‚½ãƒƒãƒ‰ã§ã€ç‰¹ã«ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆã®æ“ä½œã§ãã®åŠ›ã‚’ç™ºæ®ã—ã¾ã™ã€‚
 
-publicƒvƒƒpƒeƒB‚Ö‚ÌƒAƒNƒZƒX
+publicãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã¸ã®ã‚¢ã‚¯ã‚»ã‚¹
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-ƒvƒƒpƒeƒB‚Ì“Ç‚İ‚İ‚É‚Í "ƒhƒbƒg" ‹L–@‚ğ—p‚¢‚Ü‚·B::
+ãƒ—ãƒ­ãƒ‘ãƒ†ã‚£ã®èª­ã¿è¾¼ã¿ã«ã¯ "ãƒ‰ãƒƒãƒˆ" è¨˜æ³•ã‚’ç”¨ã„ã¾ã™ã€‚::
 
     // ...
     $person = new Person();
