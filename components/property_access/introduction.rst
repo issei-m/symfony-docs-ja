@@ -7,22 +7,21 @@
     * 対象バージョン：2.5
     * 翻訳更新日：2014/07/27
     
-The PropertyAccess Component
+PropertyAccessコンポーネント
 ============================
 
-    The PropertyAccess component provides function to read and write from/to an
-    object or array using a simple string notation.
+    PropertyAccessコンポーネントを使うと、シンプルな文字列記法を使ってオブジェクトや配列のデータを読み書きすることができます。
 
-Installation
+インストール
 ------------
 
-You can install the component in two different ways:
+以下のいずれかの方法でインストールすることができます:
 
-* :doc:`Install it via Composer</components/using_components>` (``symfony/property-access`` on `Packagist`_);
-* Use the official Git repository (https://github.com/symfony/PropertyAccess).
+* :doc:`Composerを使ってインストール</components/using_components>` (\ `Packagist` の ``symfony/property-access``\ );
+* 公式Gitリポジトリ (https://github.com/symfony/PropertyAccess).
 
-Usage
------
+使い方
+------
 
 The entry point of this component is the
 :method:`PropertyAccess::createPropertyAccessor<Symfony\\Component\\PropertyAccess\\PropertyAccess::createPropertyAccessor>`
@@ -30,20 +29,26 @@ factory. This factory will create a new instance of the
 :class:`Symfony\\Component\\PropertyAccess\\PropertyAccessor` class with the
 default configuration::
 
+コンポーネントの利用はまず、
+:method:`PropertyAccess::createPropertyAccessor<Symfony\\Component\\PropertyAccess\\PropertyAccess::createPropertyAccessor>`
+を実行します。このファクトリメソッドはデフォルトの設定で
+:class:`Symfony\\Component\\PropertyAccess\\PropertyAccessor`
+インスタンスを初期化します::
+
     use Symfony\Component\PropertyAccess\PropertyAccess;
 
     $accessor = PropertyAccess::createPropertyAccessor();
 
 .. versionadded:: 2.3
-    The :method:`Symfony\\Component\\PropertyAccess\\PropertyAccess::createPropertyAccessor`
-    method was introduced in Symfony 2.3. Previously, it was called ``getPropertyAccessor()``.
+    :method:`Symfony\\Component\\PropertyAccess\\PropertyAccess::createPropertyAccessor`
+    メソッドはSymfony 2.3から利用可能となりました。（以前このメソッドは ``getPropertyAccessor()`` と言う名前でした。）
 
-Reading from Arrays
--------------------
+配列からの読み込み
+------------------
 
-You can read an array with the
+配列のデータは
 :method:`PropertyAccessor::getValue<Symfony\\Component\\PropertyAccess\\PropertyAccessor::getValue>`
-method. This is done using the index notation that is used in PHP::
+メソッドに、PHPと同様の添字記法を用いて読み込みます。::
 
     // ...
     $person = array(
@@ -53,9 +58,9 @@ method. This is done using the index notation that is used in PHP::
     echo $accessor->getValue($person, '[first_name]'); // 'Wouter'
     echo $accessor->getValue($person, '[age]'); // null
 
-As you can see, the method will return ``null`` if the index does not exists.
+ご覧のとおり、添字に該当する値が存在しない場合は ``null`` を返します。
 
-You can also use multi dimensional arrays::
+多次元配列にも対応しています::
 
     // ...
     $persons = array(
@@ -70,16 +75,15 @@ You can also use multi dimensional arrays::
     echo $accessor->getValue($persons, '[0][first_name]'); // 'Wouter'
     echo $accessor->getValue($persons, '[1][first_name]'); // 'Ryan'
 
-Reading from Objects
---------------------
+オブジェクトからの読み込み
+--------------------------
 
-The ``getValue`` method is a very robust method, and you can see all of its
-features when working with objects.
+\ ``getValue`` は非常に強力なメソッドで、特にオブジェクトの操作でその力を発揮します。
 
-Accessing public Properties
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+publicプロパティへのアクセス
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To read from properties, use the "dot" notation::
+プロパティの読み込みには "ドット" 記法を用います。::
 
     // ...
     $person = new Person();
