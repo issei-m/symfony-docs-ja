@@ -104,7 +104,7 @@ property name (``first_name`` becomes ``FirstName``) and prefixes it with
 ``get``. So the actual method becomes ``getFirstName``
 
 \ ``getValue`` メソッドはGetterメソッドを使った読み込みにも対応しています。実行するメソッド名は、プロパティ名をキャメルケース化し、接頭辞に\ ``get``\ を付けた一般的なGetterの命名規則に従った物となります。
-（\ ``first_name`` なら `getFirstName`\ ）::
+（\ ``first_name`` なら ``getFirstName``\ ）::
 
     // ...
     class Person
