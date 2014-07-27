@@ -93,20 +93,17 @@ publicプロパティへのアクセス
 
 .. caution::
 
-    Accessing public properties is the last option used by ``PropertyAccessor``.
-    It tries to access the value using the below methods first before using
-    the property directly. For example, if you have a public property that
-    has a getter method, it will use the getter.
-
     \ ``PropertyAccessor`` はpublicプロパティにアクセスする際、まず以下に挙げる方法を試みた後、最後の手段としてプロパティへの直接アクセスを行います。例えば、プロパティが対応するGetterメソッドを持っている場合は優先的にそれが使用されます。
     
-Getterを利用
-~~~~~~~~~~~~
+Getterメソッドを利用
+~~~~~~~~~~~~~~~~~~~~
 
 The ``getValue`` method also supports reading using getters. The method will
 be created using common naming conventions for getters. It camelizes the
 property name (``first_name`` becomes ``FirstName``) and prefixes it with
 ``get``. So the actual method becomes ``getFirstName``::
+
+\ ``getValue`` メソッドはGetterメソッドを使った読み込みにも対応しています。実行するメソッド名は、プロパティ名をキャメルケース化し、接頭辞に\ ``get``\ を付けた一般的なGetterの命名規則に従った物となります。（\ ``first_name`` なら `getFirstName`\ ）
 
     // ...
     class Person
