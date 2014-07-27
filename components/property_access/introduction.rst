@@ -23,17 +23,11 @@ PropertyAccessコンポーネント
 使い方
 ------
 
-The entry point of this component is the
+コンポーネントの利用にはまず、
 :method:`PropertyAccess::createPropertyAccessor<Symfony\\Component\\PropertyAccess\\PropertyAccess::createPropertyAccessor>`
-factory. This factory will create a new instance of the
-:class:`Symfony\\Component\\PropertyAccess\\PropertyAccessor` class with the
-default configuration::
-
-コンポーネントの利用はまず、
-:method:`PropertyAccess::createPropertyAccessor<Symfony\\Component\\PropertyAccess\\PropertyAccess::createPropertyAccessor>`
-を実行します。このファクトリメソッドはデフォルトの設定で
+を実行する必要があります。このファクトリメソッドは、
 :class:`Symfony\\Component\\PropertyAccess\\PropertyAccessor`
-インスタンスを初期化します::
+インスタンスをデフォルトの設定で初期化します::
 
     use Symfony\Component\PropertyAccess\PropertyAccess;
 
@@ -58,7 +52,7 @@ default configuration::
     echo $accessor->getValue($person, '[first_name]'); // 'Wouter'
     echo $accessor->getValue($person, '[age]'); // null
 
-ご覧のとおり、添字に該当する値が存在しない場合は ``null`` を返します。
+※添字に該当する値が存在しない場合は ``null`` を返します。
 
 多次元配列にも対応しています::
 
