@@ -98,7 +98,7 @@ publicプロパティへのアクセス
     the property directly. For example, if you have a public property that
     has a getter method, it will use the getter.
 
-    \ ``PropertyAccessor`` のpublicプロパティの読み込みは、まず以下に挙げる方法を試みた後、最後の手段として直接プロパティへのアクセスを行います。例えば、プロパティが対応するGetterメソッドを持っている場合は優先的にそれが使用されます。
+    \ ``PropertyAccessor`` はpublicプロパティにアクセスする際、まず以下に挙げる方法を試みた後、最後の手段としてプロパティへの直接アクセスを行います。例えば、プロパティが対応するGetterメソッドを持っている場合は優先的にそれが使用されます。
     
 Getterを利用
 ~~~~~~~~~~~~
