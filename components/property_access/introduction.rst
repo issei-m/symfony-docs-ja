@@ -2,6 +2,11 @@
     single: PropertyAccess
     single: Components; PropertyAccess
 
+.. note::
+
+    * 対象バージョン：2.5
+    * 翻訳更新日：2014/07/27
+    
 The PropertyAccess Component
 ============================
 
@@ -409,3 +414,5 @@ Or you can pass parameters directly to the constructor (not the recommended way)
 
 
 .. _Packagist: https://packagist.org/packages/symfony/property-access
+
+.. 2014/07/27 issei-m f5198690044e23666bda88de582144270f5e4d7a
